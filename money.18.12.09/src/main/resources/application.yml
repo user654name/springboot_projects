@@ -7,6 +7,8 @@ spring:
     password: 666888
     driver-class-name: com.mysql.cj.jdbc.Driver
   thymeleaf:
-    cache: true
+    cache: false
     prefix: classpath:/templates/
     mode: HTML
+#  mvc:
+#    date-format: yyyy-MM-dd hh:mm:ss

@@ -9,23 +9,33 @@ public class Account {
 
     private Date date;
 
+    private Double chuxuZhaoshang;
+
+    private Double chuxuGongshang;
+
+    private Double chuxuJiaotong;
+
+    private Double xinyongJiaotong;
+
+    private Double weixinLingqian;
+
+    private Double weixinLicai;
+
+    private Double alipayYeb;
+
+    private Double alipayLicai;
+
+    private Double alipay2Yeb;
+
+    private Double alipay2Licai;
+
+    private Double qqQianbao;
+
+    private Double qqLicai;
+
+    private Date insertDate;
+
     private String note;
-
-    private String jiaotong;
-
-    private String jiaotongxinyong;
-
-    private String weixinLingqian;
-
-    private String weixinLicai;
-
-    private String alipayYeb;
-
-    private String alipayLicai;
-
-    private String alipay2Yeb;
-
-    private String alipay2Licai;
 
     public Integer getId() {
         return id;
@@ -51,6 +61,110 @@ public class Account {
         this.date = date;
     }
 
+    public Double getChuxuZhaoshang() {
+        return chuxuZhaoshang;
+    }
+
+    public void setChuxuZhaoshang(Double chuxuZhaoshang) {
+        this.chuxuZhaoshang = chuxuZhaoshang;
+    }
+
+    public Double getChuxuGongshang() {
+        return chuxuGongshang;
+    }
+
+    public void setChuxuGongshang(Double chuxuGongshang) {
+        this.chuxuGongshang = chuxuGongshang;
+    }
+
+    public Double getChuxuJiaotong() {
+        return chuxuJiaotong;
+    }
+
+    public void setChuxuJiaotong(Double chuxuJiaotong) {
+        this.chuxuJiaotong = chuxuJiaotong;
+    }
+
+    public Double getXinyongJiaotong() {
+        return xinyongJiaotong;
+    }
+
+    public void setXinyongJiaotong(Double xinyongJiaotong) {
+        this.xinyongJiaotong = xinyongJiaotong;
+    }
+
+    public Double getWeixinLingqian() {
+        return weixinLingqian;
+    }
+
+    public void setWeixinLingqian(Double weixinLingqian) {
+        this.weixinLingqian = weixinLingqian;
+    }
+
+    public Double getWeixinLicai() {
+        return weixinLicai;
+    }
+
+    public void setWeixinLicai(Double weixinLicai) {
+        this.weixinLicai = weixinLicai;
+    }
+
+    public Double getAlipayYeb() {
+        return alipayYeb;
+    }
+
+    public void setAlipayYeb(Double alipayYeb) {
+        this.alipayYeb = alipayYeb;
+    }
+
+    public Double getAlipayLicai() {
+        return alipayLicai;
+    }
+
+    public void setAlipayLicai(Double alipayLicai) {
+        this.alipayLicai = alipayLicai;
+    }
+
+    public Double getAlipay2Yeb() {
+        return alipay2Yeb;
+    }
+
+    public void setAlipay2Yeb(Double alipay2Yeb) {
+        this.alipay2Yeb = alipay2Yeb;
+    }
+
+    public Double getAlipay2Licai() {
+        return alipay2Licai;
+    }
+
+    public void setAlipay2Licai(Double alipay2Licai) {
+        this.alipay2Licai = alipay2Licai;
+    }
+
+    public Double getQqQianbao() {
+        return qqQianbao;
+    }
+
+    public void setQqQianbao(Double qqQianbao) {
+        this.qqQianbao = qqQianbao;
+    }
+
+    public Double getQqLicai() {
+        return qqLicai;
+    }
+
+    public void setQqLicai(Double qqLicai) {
+        this.qqLicai = qqLicai;
+    }
+
+    public Date getInsertDate() {
+        return insertDate;
+    }
+
+    public void setInsertDate(Date insertDate) {
+        this.insertDate = insertDate;
+    }
+
     public String getNote() {
         return note;
     }
@@ -59,67 +173,26 @@ public class Account {
         this.note = note == null ? null : note.trim();
     }
 
-    public String getJiaotong() {
-        return jiaotong;
-    }
-
-    public void setJiaotong(String jiaotong) {
-        this.jiaotong = jiaotong == null ? null : jiaotong.trim();
-    }
-
-    public String getJiaotongxinyong() {
-        return jiaotongxinyong;
-    }
-
-    public void setJiaotongxinyong(String jiaotongxinyong) {
-        this.jiaotongxinyong = jiaotongxinyong == null ? null : jiaotongxinyong.trim();
-    }
-
-    public String getWeixinLingqian() {
-        return weixinLingqian;
-    }
-
-    public void setWeixinLingqian(String weixinLingqian) {
-        this.weixinLingqian = weixinLingqian == null ? null : weixinLingqian.trim();
-    }
-
-    public String getWeixinLicai() {
-        return weixinLicai;
-    }
-
-    public void setWeixinLicai(String weixinLicai) {
-        this.weixinLicai = weixinLicai == null ? null : weixinLicai.trim();
-    }
-
-    public String getAlipayYeb() {
-        return alipayYeb;
-    }
-
-    public void setAlipayYeb(String alipayYeb) {
-        this.alipayYeb = alipayYeb == null ? null : alipayYeb.trim();
-    }
-
-    public String getAlipayLicai() {
-        return alipayLicai;
-    }
-
-    public void setAlipayLicai(String alipayLicai) {
-        this.alipayLicai = alipayLicai == null ? null : alipayLicai.trim();
-    }
-
-    public String getAlipay2Yeb() {
-        return alipay2Yeb;
-    }
-
-    public void setAlipay2Yeb(String alipay2Yeb) {
-        this.alipay2Yeb = alipay2Yeb == null ? null : alipay2Yeb.trim();
-    }
-
-    public String getAlipay2Licai() {
-        return alipay2Licai;
-    }
-
-    public void setAlipay2Licai(String alipay2Licai) {
-        this.alipay2Licai = alipay2Licai == null ? null : alipay2Licai.trim();
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", uid=" + uid +
+                ", date=" + date +
+                ", chuxuZhaoshang=" + chuxuZhaoshang +
+                ", chuxuGongshang=" + chuxuGongshang +
+                ", chuxuJiaotong=" + chuxuJiaotong +
+                ", xinyongJiaotong=" + xinyongJiaotong +
+                ", weixinLingqian=" + weixinLingqian +
+                ", weixinLicai=" + weixinLicai +
+                ", alipayYeb=" + alipayYeb +
+                ", alipayLicai=" + alipayLicai +
+                ", alipay2Yeb=" + alipay2Yeb +
+                ", alipay2Licai=" + alipay2Licai +
+                ", qqQianbao=" + qqQianbao +
+                ", qqLicai=" + qqLicai +
+                ", insertDate=" + insertDate +
+                ", note='" + note + '\'' +
+                '}';
     }
 }
