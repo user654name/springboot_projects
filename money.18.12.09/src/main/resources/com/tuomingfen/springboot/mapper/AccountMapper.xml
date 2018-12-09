@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tuomingfen.springboot.mapper.AccountMapper">
+  <resultMap id="BaseResultMap" type="com.tuomingfen.springboot.mapper.Account">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="date" jdbcType="TIMESTAMP" property="date" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="jiaotong" jdbcType="VARCHAR" property="jiaotong" />
+    <result column="jiaotongxinyong" jdbcType="VARCHAR" property="jiaotongxinyong" />
+    <result column="weixin_lingqian" jdbcType="VARCHAR" property="weixinLingqian" />
+    <result column="weixin_licai" jdbcType="VARCHAR" property="weixinLicai" />
+    <result column="alipay_yeb" jdbcType="VARCHAR" property="alipayYeb" />
+    <result column="alipay_licai" jdbcType="VARCHAR" property="alipayLicai" />
+    <result column="alipay2_yeb" jdbcType="VARCHAR" property="alipay2Yeb" />
+    <result column="alipay2_licai" jdbcType="VARCHAR" property="alipay2Licai" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, uid, date, note, jiaotong, jiaotongxinyong, weixin_lingqian, weixin_licai, alipay_yeb, 
+    alipay_licai, alipay2_yeb, alipay2_licai
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from my_account_table
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from my_account_table
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tuomingfen.springboot.mapper.Account">
+    insert into my_account_table (id, uid, date, 
+      note, jiaotong, jiaotongxinyong, 
+      weixin_lingqian, weixin_licai, alipay_yeb, 
+      alipay_licai, alipay2_yeb, alipay2_licai
+      )
+    values (#{id,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{date,jdbcType=TIMESTAMP}, 
+      #{note,jdbcType=VARCHAR}, #{jiaotong,jdbcType=VARCHAR}, #{jiaotongxinyong,jdbcType=VARCHAR}, 
+      #{weixinLingqian,jdbcType=VARCHAR}, #{weixinLicai,jdbcType=VARCHAR}, #{alipayYeb,jdbcType=VARCHAR}, 
+      #{alipayLicai,jdbcType=VARCHAR}, #{alipay2Yeb,jdbcType=VARCHAR}, #{alipay2Licai,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tuomingfen.springboot.mapper.Account">
+    insert into my_account_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="date != null">
+        date,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="jiaotong != null">
+        jiaotong,
+      </if>
+      <if test="jiaotongxinyong != null">
+        jiaotongxinyong,
+      </if>
+      <if test="weixinLingqian != null">
+        weixin_lingqian,
+      </if>
+      <if test="weixinLicai != null">
+        weixin_licai,
+      </if>
+      <if test="alipayYeb != null">
+        alipay_yeb,
+      </if>
+      <if test="alipayLicai != null">
+        alipay_licai,
+      </if>
+      <if test="alipay2Yeb != null">
+        alipay2_yeb,
+      </if>
+      <if test="alipay2Licai != null">
+        alipay2_licai,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="jiaotong != null">
+        #{jiaotong,jdbcType=VARCHAR},
+      </if>
+      <if test="jiaotongxinyong != null">
+        #{jiaotongxinyong,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinLingqian != null">
+        #{weixinLingqian,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinLicai != null">
+        #{weixinLicai,jdbcType=VARCHAR},
+      </if>
+      <if test="alipayYeb != null">
+        #{alipayYeb,jdbcType=VARCHAR},
+      </if>
+      <if test="alipayLicai != null">
+        #{alipayLicai,jdbcType=VARCHAR},
+      </if>
+      <if test="alipay2Yeb != null">
+        #{alipay2Yeb,jdbcType=VARCHAR},
+      </if>
+      <if test="alipay2Licai != null">
+        #{alipay2Licai,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tuomingfen.springboot.mapper.Account">
+    update my_account_table
+    <set>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="date != null">
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="jiaotong != null">
+        jiaotong = #{jiaotong,jdbcType=VARCHAR},
+      </if>
+      <if test="jiaotongxinyong != null">
+        jiaotongxinyong = #{jiaotongxinyong,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinLingqian != null">
+        weixin_lingqian = #{weixinLingqian,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinLicai != null">
+        weixin_licai = #{weixinLicai,jdbcType=VARCHAR},
+      </if>
+      <if test="alipayYeb != null">
+        alipay_yeb = #{alipayYeb,jdbcType=VARCHAR},
+      </if>
+      <if test="alipayLicai != null">
+        alipay_licai = #{alipayLicai,jdbcType=VARCHAR},
+      </if>
+      <if test="alipay2Yeb != null">
+        alipay2_yeb = #{alipay2Yeb,jdbcType=VARCHAR},
+      </if>
+      <if test="alipay2Licai != null">
+        alipay2_licai = #{alipay2Licai,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tuomingfen.springboot.mapper.Account">
+    update my_account_table
+    set uid = #{uid,jdbcType=INTEGER},
+      date = #{date,jdbcType=TIMESTAMP},
+      note = #{note,jdbcType=VARCHAR},
+      jiaotong = #{jiaotong,jdbcType=VARCHAR},
+      jiaotongxinyong = #{jiaotongxinyong,jdbcType=VARCHAR},
+      weixin_lingqian = #{weixinLingqian,jdbcType=VARCHAR},
+      weixin_licai = #{weixinLicai,jdbcType=VARCHAR},
+      alipay_yeb = #{alipayYeb,jdbcType=VARCHAR},
+      alipay_licai = #{alipayLicai,jdbcType=VARCHAR},
+      alipay2_yeb = #{alipay2Yeb,jdbcType=VARCHAR},
+      alipay2_licai = #{alipay2Licai,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
