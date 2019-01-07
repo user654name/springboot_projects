@@ -67,6 +67,17 @@
 			<version>3.7</version>
 		</dependency>
 
+
+		<!-- 自动生成Bean getter and setter -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+
 		<!--安全框架-->
 		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
